@@ -1,5 +1,22 @@
 # Distributed-Systems-with-GRPC
+* ## Objectifs : 
+<p align="justify">Pour illustrer les quatre modèles de gRPC, nous allons prendre comme exemple un service de conversion de monnaie. Imaginons que nous ayons un microservice appelé "Currency Service" qui expose différentes opérations de conversion de devises.</p>
 
+* # Unary Model (Modèle unidirectionnel) :
+<p align="justify">Dans ce modèle, le client envoie une seule requête au serveur et attend une seule réponse. Dans notre cas, le client peut envoyer une requête avec le montant à convertir et les devises source et cible. Le serveur effectue la conversion et renvoie la réponse au client avec le montant converti. Ce modèle convient bien pour les conversions simples et rapides.</p>
+
+Server Streaming Model (Modèle de streaming côté serveur) :
+<p align="justify">Dans ce modèle, le client envoie une requête au serveur, mais le serveur renvoie une séquence de réponses. Dans notre exemple, le client peut envoyer une requête pour obtenir les taux de change entre différentes devises. Le serveur peut ensuite diffuser en continu les taux de change au client, lui permettant de recevoir les mises à jour en temps réel.</p>
+
+Client Streaming Model (Modèle de streaming côté client) :
+<p align="justify">Dans ce modèle, le client envoie une séquence de requêtes au serveur, mais le serveur ne renvoie qu'une seule réponse. Dans notre cas, le client peut envoyer plusieurs requêtes avec des montants à convertir. Le serveur attend de recevoir toutes les requêtes, effectue les conversions correspondantes et renvoie une seule réponse avec les montants convertis agrégés.</p>
+
+BiDirectional Streaming Model (Modèle de streaming bidirectionnel) :
+<p align="justify">Dans ce modèle, à la fois le client et le serveur peuvent envoyer une séquence de messages. Le client peut envoyer des requêtes de conversion de monnaie à mesure que les montants sont disponibles, et le serveur peut renvoyer les réponses de conversion correspondantes. Ce modèle est adapté lorsque le client et le serveur ont une interaction continue et ont besoin de communiquer de manière asynchrone.</p>
+
+<p align="justify">Chacun de ces modèles de gRPC offre des fonctionnalités spécifiques pour répondre à différents besoins. Dans le contexte d'un service de conversion de monnaie, ces modèles peuvent être utilisés pour des scénarios tels que la conversion unique, le suivi des taux de change en continu, l'envoi de multiples conversions en lot, ou encore une interaction continue entre le client et le serveur pour des conversions dynamiques.</p>
+
+Il est important de choisir le modèle approprié en fonction des exigences de votre application, du niveau d'interactivité nécessaire et de la quantité de données à échanger entre le client et le serveur.
 <img width="602" alt="1" src="https://github.com/aymaneisruby/Distributed-Systems-with-GRPC/assets/105078337/879c8b60-1b62-4233-9184-a61d4036f15d">
 <img width="960" alt="2" src="https://github.com/aymaneisruby/Distributed-Systems-with-GRPC/assets/105078337/81074ff4-191e-428e-9918-0b7bfbcf15c6">
 <img width="960" alt="3" src="https://github.com/aymaneisruby/Distributed-Systems-with-GRPC/assets/105078337/d23ffe11-ef0f-44a4-a506-3b045a0b8c23">
