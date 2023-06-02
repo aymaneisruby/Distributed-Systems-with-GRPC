@@ -1,6 +1,6 @@
 # Distributed-Systems-with-GRPC
 * ## Objectifs : 
-<p align="justify">Pour illustrer les quatre modèles de gRPC, nous allons prendre comme exemple un service de conversion de monnaie. Imaginons que nous ayons un microservice appelé "Currency Service" qui expose différentes opérations de conversion de devises.</p>
+<p align="justify">Pour illustrer les quatre modèles de gRPC, nous allons prendre comme exemple un service de conversion de monnaie. Imaginons que nous ayons un microservice appelé "Bank Service" qui expose différentes opérations de conversion de devises.</p>
 
 * ### Unary Model (Modèle unidirectionnel) :
 <p align="justify">Dans ce modèle, le client envoie une seule requête au serveur et attend une seule réponse. Dans notre cas, le client peut envoyer une requête avec le montant à convertir et les devises source et cible. Le serveur effectue la conversion et renvoie la réponse au client avec le montant converti. Ce modèle convient bien pour les conversions simples et rapides.</p>
