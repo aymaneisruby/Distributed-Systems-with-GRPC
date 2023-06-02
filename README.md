@@ -17,6 +17,7 @@
 <p align="justify">Chacun de ces modèles de gRPC offre des fonctionnalités spécifiques pour répondre à différents besoins. Dans le contexte d'un service de conversion de monnaie, ces modèles peuvent être utilisés pour des scénarios tels que la conversion unique, le suivi des taux de change en continu, l'envoi de multiples conversions en lot, ou encore une interaction continue entre le client et le serveur pour des conversions dynamiques.</p>
 
 Il est important de choisir le modèle approprié en fonction des exigences de votre application, du niveau d'interactivité nécessaire et de la quantité de données à échanger entre le client et le serveur.
+
 <img width="602" alt="1" src="https://github.com/aymaneisruby/Distributed-Systems-with-GRPC/assets/105078337/879c8b60-1b62-4233-9184-a61d4036f15d">
 <img width="960" alt="2" src="https://github.com/aymaneisruby/Distributed-Systems-with-GRPC/assets/105078337/81074ff4-191e-428e-9918-0b7bfbcf15c6">
 <img width="960" alt="3" src="https://github.com/aymaneisruby/Distributed-Systems-with-GRPC/assets/105078337/d23ffe11-ef0f-44a4-a506-3b045a0b8c23">
